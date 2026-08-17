@@ -18,52 +18,11 @@ function DonorLogin() {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
 
-  const handleLogin = async () => {
-    setError('')
-
-    if (!email || !password) {
-      setError('Please enter email and password')
-      return
-    }
-
-    try {
-      setLoading(true)
-
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-          role: 'donor',
-        }),
-      })
-
-      const data = await response.json()
-
-      console.log('LOGIN RESPONSE:', data)
-
-      if (!response.ok) {
-        setError(data.message || 'Login failed')
-        return
-      }
-
-      // Store logged-in donor information
-      localStorage.setItem('user', JSON.stringify(data.user))
-
-      // Go to donor dashboard
-      navigate('/donor-dashboard')
-
-    } catch (error) {
-      console.error('Login error:', error)
-      setError('Unable to connect to server')
-    } finally {
-      setLoading(false)
-    }
-  }
-
+  const handleLogin = () => {
+  // Demo login — accepts any email and password
+  localStorage.setItem("DonorLoggedIn", "true");
+  navigate("/donor-dashboard");
+};
   return (
     <div className="login-page">
 
