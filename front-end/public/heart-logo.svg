@@ -1,0 +1,7 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Large Heart Shape -->
+  <path d="M100 170C100 170 20 130 20 80C20 60 35 45 50 45C65 45 80 55 100 70C120 55 135 45 150 45C165 45 180 60 180 80C180 130 100 170 100 170Z" fill="#E63946" stroke="#D81E3A" strokeWidth="2"/>
+  
+  <!-- Heart Highlight/Shine -->
+  <ellipse cx="70" cy="65" rx="20" ry="25" fill="#FF6B7A" opacity="0.6"/>
+</svg>
